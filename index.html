@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Femi's Spider-Man Birthday Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="light-mode">
+  <!-- Spider Web Background -->
+  <div class="spider-web">
+    <svg viewBox="0 0 400 400">
+      <path d="M200,50 L200,350 M50,200 L350,200 M75,75 L325,325 M325,75 L75,325" stroke="currentColor" stroke-width="1" fill="none" />
+      <circle cx="200" cy="200" r="50" stroke="currentColor" stroke-width="1" fill="none" />
+      <circle cx="200" cy="200" r="100" stroke="currentColor" stroke-width="1" fill="none" />
+      <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="1" fill="none" />
+    </svg>
+  </div>
+
+  <!-- Floating Particles -->
+  <div class="floating-particles" id="floating-particles"></div>
+
+  <!-- Crawling Spiders -->
+  <div class="crawling-spiders" id="crawling-spiders"></div>
+
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <button id="dark-mode-btn">
+      <i data-lucide="moon"></i>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content" id="content">
+    <!-- Home Page -->
+    <div id="home-page">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="spider-emoji">🕷️</div>
+        <h1>
+          Hi, I'm <span class="highlight-name">Oluwafemi</span><br>
+          and I just turned <span class="highlight-age">5!</span>
+        </h1>
+        <div class="subtext-container">
+          <p id="subtext-0" class="subtext">Kinda shy 🫣</p>
+          <p id="subtext-1" class="subtext hidden">Really brave 💪🏽</p>
+          <p id="subtext-2" class="subtext hidden">Spider-sense strong 🕸️</p>
+        </div>
+        <button id="gift-btn">
+          <i data-lucide="gift"></i>Send Me a Gift
+        </button>
+      </section>
+
+      <!-- About Me Section -->
+      <section class="about-section">
+        <h2>About Me 🕸️</h2>
+        <div id="bio-lines" class="bio-lines">
+          <p>Yo! I'm Oluwafemi but my people call me Femi. I just turned 5 🎉</p>
+          <p>I'm super shy… like I'll hide behind the chair if too many people look at me 😅</p>
+          <p>But don't sleep on me — I'm crazy brave when it's time to be 💥</p>
+          <p>If I don't like something, I'm not doing it. Period. 😂</p>
+          <p>But if I do like it? Oh I'm doing it perfectly.</p>
+          <p>I love superheroes — Spider-Man's my guy 🕷️🕸️</p>
+          <p>I'm not loud, but my brain is doing 1000 ideas per minute 🤯</p>
+          <p>I don't copy people. I do me. Always 💯</p>
+          <p>People say I'm one of the good ones. I say I'm one of the greatest 😎</p>
+          <p>I've got the brightest future ever — like, sunglasses-bright 🕶️☀️</p>
+          <p>Thanks for checking out my birthday page. I hope yours is this cool someday! 👋🏽</p>
+        </div>
+        <button id="venue-btn">🎉 Come Celebrate With Me!</button>
+      </section>
+
+      <!-- Gallery Preview Section -->
+      <section class="gallery-section">
+        <h2>My Photo Gallery 📸</h2>
+        <div class="gallery-preview">
+          <img src="h.jpg" alt="Preview 1">
+          <img src="j.jpg" alt="Preview 2">
+          <img src="m.jpg" alt="Preview 3">
+        </div>
+        <button id="gallery-btn">
+          <i data-lucide="camera"></i> See All Photos
+        </button>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <h2>Want a page like mine?</h2>
+        <p>My birthday page was custom-made. Want yours too? Hit up my awesome dev!</p>
+        <button id="contact-btn">🚀 BUILD MINE</button>
+      </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery-page" class="hidden">
+      <div class="gallery-header">
+        <button id="back-home-btn">
+          <i data-lucide="chevron-left"></i> Back Home
+        </button>
+        <h1>🕸️ Femi's Photo Gallery 📸</h1>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="n.jpg" alt="Gallery 1">
+          <div class="gallery-overlay"><i data-lucide="camera"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="h.jpg" alt="Gallery 2">
+          <div class="gallery-overlay"><i data-lucide="camera"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="c.jpg" alt="Gallery 3">
+          <div class="gallery-overlay"><i data-lucide="camera"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="d.jpg" alt="Gallery 4">
+          <div class="gallery-overlay"><i data-lucide="camera"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="m.jpg" alt="Gallery 5">
+          <div class="gallery-overlay"><i data-lucide="camera"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="w.jpg" alt="Gallery 6">
+          <div class="gallery-overlay"><i data-lucide="camera"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gift Panel -->
+  <div id="gift-panel" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="emoji">🎁</div>
+        <h3>Send Femi a Gift!</h3>
+        <p>Account details will be added here</p>
+      </div>
+      <div class="modal-body">
+        <div class="account-details">
+          <p class="font-semibold">Bank Account</p>
+          <p class="opacity-75">Details coming soon...</p>
+          <button id="copy-btn">
+            <i data-lucide="copy"></i>
+          </button>
+        </div>
+      </div>
+      <button id="close-gift-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Venue Panel -->
+  <div id="venue-panel" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="emoji">🎉</div>
+        <h3>Come Celebrate With Me!</h3>
+        <p>Here are all the party details</p>
+      </div>
+      <div class="modal-body">
+        <div class="venue-details">
+          <h4>🏢 Venue</h4>
+          <p>Amazing Grace Children Park</p>
+        </div>
+        <div class="venue-details">
+          <h4>📅 Date & Time</h4>
+          <p>Date: 05 July 2025</p>
+          <p>Time: 11:00PM - 5:00AM</p>
+        </div>
+        <div class="venue-details">
+          <h4><i data-lucide="map-pin"></i> Location</h4>
+          <p>Plot 2 Road i3 High Castle Estate P and T Bus Stop Ipaja Road Alimosho Lagos.</p>
+        </div>
+        <div class="venue-details">
+          <h4>🎥 Venue Video</h4>
+          <div class="video-placeholder">
+            <video width="100%" controls poster="">
+                <source src="venue.mp4" type="video/mp4" >
+
+            </video>
+          </div>
+        </div>
+      </div>
+      <button id="close-venue-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Contact Panel -->
+  <div id="contact-panel" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="emoji">👨‍💻</div>
+        <h3>Contact My Dev!</h3>
+        <p>Choose how you'd like to reach out</p>
+      </div>
+      <div class="modal-body">
+        <button class="contact-option">
+          <i data-lucide="message-circle"></i> WhatsApp <br> 2349023962938
+
+        </button>
+        <button class="contact-option">
+          <i data-lucide="mail"></i> Email <br> damijosh12@gmail.com
+        </button>
+        <button class="contact-option">
+          <i data-lucide="phone"></i> Call <br> +2349023962938
+        </button>
+      </div>
+      <button id="close-contact-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Image Modal -->
+  <div id="image-modal" class="modal hidden">
+    <div class="image-modal-content">
+      <img id="modal-image" src="" alt="Selected Image">
+      <button id="close-image-btn">×</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
